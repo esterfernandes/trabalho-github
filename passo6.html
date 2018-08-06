@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Exemplo Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
+ </head>
+ <body style="background-color:">
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="file:///C:/Users/IFSP/Desktop/trabalho-github/trabalho1.html">Pagina Inicial</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+</nav>
+
+
+<div class="container"> 
+<div class="jumbotron">
+  <h1 class="display-4">Comandos</h1>
+  <p class="lead">
+<h3>Instalando git </h3> 
+O git é um programa que pode ser instalado neste link para Windows, neste para Mac, ou então através do comando sudo apt-get install git para plataformas Linux/Debian, como o Ubuntu. Se você usa uma VM na nuvem, como o cloud9 ou koding, o git já estará disponível em sua linha de comando.
+
+Nossa metodologia é fazer com que você aprenda git já utilizando o github, então vamos a sua configuração!
+
+Criando a conta no GitHub
+O github não possui instalação, ele é um serviço, e caso você não tenha uma conta, chegou a hora de criá-la, neste link. Após criar a conta, você verá um botão verde +New Repository na qual poderá criar um repositório de acordo com a tela a seguir. <br>
+<br>
+<img src="img/um.png">
+
+</p>
+<p>
+  Nesta imagem estamos criando um repositório cujo nome é site, de domínio público (podem ser criados reps privados pagando uma mensalidade), e com o arquivo README.md embutido, que contém uma descrição do seu projeto. Para que possamos começar a entender como o git funciona, é fundamental criar um rep como este para os nossos testes.
+
+Após a criação do repositório, ele estará disponível no endereço https://github.com/<username>/site, onde usernameé o login que você usou para se cadastrar. Acessando esta url temos a seguinte resposta: <br> <br>
+
+<img src="img/dois.png">
+
+  </p>
+<p>
+  Temos muitas informações nesta tela, pois ela é a tela principal do seu projeto. Explicaremos algumas informações ao longo deste artigo, por enquanto repare apenas no botão HTTPs Clone Url na parte inferior à direta. Esta URl será necessária para que possamos “clonar” este projeto em nosso ambiente de estudo (sua máquina windows, mac, linux ou a vm). Clique no botão de copiar URL e perceba que a seguinte URL está na área de transferência: https://github.com/<username>/site.git
+
+Configurando o git
+Existem 2 pequenos passos para configurar o seu GIT para ter um acesso mais simplificado ao github. Aqui estaremos estabelecendo que, sempre que necessitar, você irá fornecer o seu login e senha ao GitHub. <br> Existem meios para salvar a senha em local seguro, mas vamos pular esta etapa. Para abrir um terminal GIT no Windows, basta criar uma pasta no seu sistema e, nela, clicar com o botão direito do mouse e escolher Git Bash Here. Em sistemas mac/linux você já está acostumado a usar o terminal/console, o git estará lá disponível. Neste artigo estaremos utilizando a máquina virtual cloud9, que você pode aprender a usá-la neste artigo.
+
+Então, com o seu terminal git aberto, vamos digitar:
+
+$ git config --global user.name "YOUR NAME"
+$ git config --global user.email "YOUR EMAIL ADDRESS"
+Estas configurações ficam alocadas no arquivo ~/.gitconfig, onde o ~ é o seu diretório home. No Windows, ele fica em c:\Usuarios\<username>\.gitconfig. Veja a figura a seguir com a minha configuração no cloud9. <br> <br>
+<img src="img/tres.png">
+
+</p>
+<p>
+  Vamos clonar!
+Então o que temos até agora é o git configurado para utilizar o github e o projeto no github criado. Precisamos trazer este projeto para o nosso git, e este processo se chama clonar. Então, quando você quiser começar um projeto utilizando git, você cria ele no github e clona na sua máquina. O comando para clonar o projeto é git clone "url", veja:
+
+git clone https://github.com/<username>/site.git <br> <br>
+<img src="img/quatro.png">
+
+</p>
+<p>
+  Perceba que, ao fazer o git clone, o projeto é baixado para a sua máquina, e uma pasta com o nome do projeto é criada.
+
+Quer dizer que qualquer pessoa pode baixar o meu projeto? Sim, isso é natural, já que o seu repositório está público. Qualquer um pode clonar ele para si, mas eles não podem alterar os seus arquivos, isso não vai acontecer, exceto que você permita.
+ <br>
+Comandos iniciais do git
+Com o repositório na sua máquina, vamos aprender 4 comandos iniciais que farão parte da sua vida a partir de agora:
+
+git add <arquivos...> Este comando adiciona o(s) arquivo(s) em um lugar que chamamos de INDEX, que funciona como uma área do git no qual os arquivos possam ser enviados ao Github. <br> É importante saber que ADD não está adicionando um arquivo novo ao repositório, mas sim dizendo que o arquivo (sendo novo ou não) está sendo preparado para entrar na próxima revisão do repositório.
+git commit -m "comentário qualquer" Este comando realiza o que chamamos de “commit”, que significa pegar todos os arquivos que estão naquele lugar INDEX que o comando add adicionou e criar uma revisão com um número e um comentário, que será vista por todos.
+git push Push (empurrar) é usado para publicar todos os seus commits para o github. Neste momento, será pedido a sua senha.
+git status Exibe o status do seu repositório atual
+</p>
+  <hr class="my-4">
+  <p>Se quiser saber mais, aperte o botão abaixo e confira:</p>
+  <a class="btn btn-primary btn-lg" href="file:///C:/Users/IFSP/Desktop/trabalho-github/final.html" role="button">Quinta Etapa</a>
+</div>
+</div>
+  
+  <!-- Seu código vai aqui! -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/vendor/jquery-slim.min.js"></script>
+    <script src="assets/js/vendor/popper.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/vendor/holder.min.js"></script>
+    <script>
+      Holder.addTheme('thumb', {
+        bg: '#55595c',
+        fg: '#eceeef',
+        text: 'Thumbnail'
+      });
+    </script>
+  </body>
+</html>
